@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+     >
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="滑动选择日期" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#333"
+        android:layout_below="@id/date"
+        />
+       <!--  <DatePicker
+            android:layout_below="@id/date"
+            android:id="@+id/datepicker_layout"
+            android:layout_marginTop="20dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+            >
+        </DatePicker> -->
+        <com.itfocus.lanzhiming.flatwheeldatepicker.MyDatePicker
+            android:layout_below="@id/date"
+            android:id="@+id/datepicker_layout"
+            android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+            >
+        </com.itfocus.lanzhiming.flatwheeldatepicker.MyDatePicker>
+        <!-- <CheckBox
+            android:id="@+id/allDate" 
+            android:layout_below="@id/datepicker_layout"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:layout_centerHorizontal="true"
+		    android:text="显示全部" 
+            ></CheckBox> -->
+
+        <LinearLayout
+            android:id="@+id/mylayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/datepicker_layout"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+             <TextView 
+		        android:id="@+id/datepicker_btcancel"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:textColor="#00c8a0"
+		        android:textSize="18sp"
+		        android:background="@drawable/setbar_bg"
+		        android:text="取消"
+		        />
+             <TextView 
+		        android:id="@+id/datepicker_btalldata"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:textColor="#00c8a0"
+		        android:textSize="18sp"
+		        android:text="全部"
+		        android:background="@drawable/setbar_bg"
+		        />
+             <TextView 
+		        android:id="@+id/datepicker_btsure"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:textColor="#00c8a0"
+		        android:textSize="18sp"
+		        android:text="确定"
+		        android:background="@drawable/setbar_bg"
+		        />
+        </LinearLayout>
+
+</RelativeLayout>
